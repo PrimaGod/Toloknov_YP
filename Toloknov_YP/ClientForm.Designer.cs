@@ -40,34 +40,35 @@ namespace Toloknov_YP
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.tb_NumberSort);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(261, 340);
+            this.groupBox1.Location = new System.Drawing.Point(12, 340);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 76);
+            this.groupBox1.Size = new System.Drawing.Size(243, 76);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сортировка";
+            this.groupBox1.Text = "Отображение";
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(211, 48);
+            this.button7.Location = new System.Drawing.Point(6, 19);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 6;
@@ -146,39 +147,12 @@ namespace Toloknov_YP
             this.groupBox2.Controls.Add(this.button9);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 353);
+            this.groupBox2.Location = new System.Drawing.Point(393, 340);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(243, 55);
+            this.groupBox2.Size = new System.Drawing.Size(240, 55);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Навигация";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(60, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(55, 23);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "<";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(121, 19);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 23);
-            this.button9.TabIndex = 2;
-            this.button9.Text = ">";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
@@ -189,11 +163,49 @@ namespace Toloknov_YP
             this.button10.Text = ">>";
             this.button10.UseVisualStyleBackColor = true;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(121, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(55, 23);
+            this.button9.TabIndex = 2;
+            this.button9.Text = ">";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(60, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(55, 23);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "<";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "<<";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Location = new System.Drawing.Point(661, 336);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(435, 193);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Сортировка";
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 470);
+            this.ClientSize = new System.Drawing.Size(1105, 529);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
@@ -205,6 +217,7 @@ namespace Toloknov_YP
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,5 +238,6 @@ namespace Toloknov_YP
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

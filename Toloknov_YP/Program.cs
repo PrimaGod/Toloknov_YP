@@ -16,7 +16,7 @@ namespace Toloknov_YP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EnterForm());
+            Application.Run(new ClientForm());
         }
     }
 }

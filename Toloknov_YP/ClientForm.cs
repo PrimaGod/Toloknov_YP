@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Toloknov_YP
@@ -19,7 +14,7 @@ namespace Toloknov_YP
             InitializeComponent();
         }
 
-        void Restart(string sql) //Способ обновления таблицы
+        void Loading(string sql) //Способ загрузки таблицы
         {
             string connectionString = (conStr);
     
@@ -39,7 +34,7 @@ namespace Toloknov_YP
         {
             this.Location = new Point(300, 250);
             
-            Restart("SELECT * FROM Client"); //В скобку пишется командная строка для SQL
+            Loading("SELECT * FROM Client"); //В скобку пишется командная строка для SQL
         }
 
         private void btn_switch_over_EnterForm(object sender, EventArgs e)
@@ -51,32 +46,32 @@ namespace Toloknov_YP
 
         private void btn_Sort_AZ(object sender, EventArgs e)
         {
-            Restart("SELECT * FROM Client ORDER BY FirstName");
+            Loading("SELECT * FROM Client ORDER BY FirstName");
         }
 
         private void btn_Top10(object sender, EventArgs e)
         {
-            Restart("SELECT TOP(10) * FROM Client");
+            Loading("SELECT TOP(10) * FROM Client");
         }
 
         private void btn_Top50(object sender, EventArgs e)
         {
-            Restart("SELECT TOP(50) * FROM Client");
+            Loading("SELECT TOP(50) * FROM Client");
         }
 
         private void btn_Top200(object sender, EventArgs e)
         {
-            Restart("SELECT TOP(200) * FROM Client");
+            Loading("SELECT TOP(200) * FROM Client");
         }
 
         private void btn_SizeAll(object sender, EventArgs e)
         {
-            Restart("SELECT * FROM Client");
+            Loading("SELECT * FROM Client");
         }
 
         private void btn_TopEnter(object sender, EventArgs e)
         {
-            Restart("SELECT TOP("+tb_NumberSort.Text+") * FROM Client");
+            Loading("SELECT TOP("+tb_NumberSort.Text+") * FROM Client");
         }
 
         
