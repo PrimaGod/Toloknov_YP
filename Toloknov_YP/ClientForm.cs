@@ -19,10 +19,10 @@ namespace Toloknov_YP
             InitializeComponent();
         }
 
-        void Restart() //Способ обновления таблицы
+        void Restart(string sql) //Способ обновления таблицы
         {
             string connectionString = (conStr);
-            string sql = "SELECT * FROM Client";
+    
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -30,36 +30,65 @@ namespace Toloknov_YP
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
+                connection.Close();
             }
         }
-
-
-
-
-
 
 
         private void ClientForm_Load(object sender, EventArgs e)
         {
             this.Location = new Point(300, 250);
-            string connectionString = (conStr);
-            string sql = "SELECT * FROM Client";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-            }
-            Restart();
+            
+            Restart("SELECT * FROM Client"); //В скобку пишется командная строка для SQL
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_switch_over_EnterForm(object sender, EventArgs e)
         {
             this.Close();
             EnterForm newEnterForm = new EnterForm();
             newEnterForm.Show();
         }
+
+
+        private void btn_Sort_AZ(object sender, EventArgs e)
+        {
+            Restart("SELECT * FROM Client ORDER BY FirstName");
+        }
+
+        private void btn_Top10(object sender, EventArgs e)
+        {
+            Restart("SELECT TOP(10) * FROM Client");
+        }
+
+        private void btn_Top50(object sender, EventArgs e)
+        {
+            Restart("SELECT TOP(50) * FROM Client");
+        }
+
+        private void btn_Top200(object sender, EventArgs e)
+        {
+            Restart("SELECT TOP(200) * FROM Client");
+        }
+
+        private void btn_SizeAll(object sender, EventArgs e)
+        {
+            Restart("SELECT * FROM Client");
+        }
+
+        private void btn_TopEnter(object sender, EventArgs e)
+        {
+            Restart("SELECT TOP("+tb_NumberSort.Text+") * FROM Client");
+        }
+
+        
+
+
+
+
+
+
+
+
+
     }
 }
