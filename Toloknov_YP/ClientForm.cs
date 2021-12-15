@@ -44,9 +44,8 @@ namespace Toloknov_YP
 
         private void btn_switch_over_EnterForm(object sender, EventArgs e)
         {
-            this.Close();
-            EnterForm newEnterForm = new EnterForm();
-            newEnterForm.Show();
+            
+            
         }
 
 
