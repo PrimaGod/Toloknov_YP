@@ -14,6 +14,11 @@ namespace Toloknov_YP
             InitializeComponent();
         }
 
+
+        
+
+       
+
         void Loading(string sql) //Способ загрузки таблицы
         {
             string connectionString = (conStr);
@@ -35,6 +40,7 @@ namespace Toloknov_YP
             this.Location = new Point(300, 250);
             
             Loading("SELECT * FROM Client"); //В скобку пишется командная строка для SQL
+            dataGridView1.Columns["PhotoPath"].Visible = false;
         }
 
         private void btn_switch_over_EnterForm(object sender, EventArgs e)
@@ -46,7 +52,7 @@ namespace Toloknov_YP
 
         private void btn_Sort_AZ(object sender, EventArgs e)
         {
-            Loading("SELECT * FROM Client ORDER BY FirstName");
+            Loading("SELECT * FROM Client ORDER BY LastName");
         }
 
         private void btn_Top10(object sender, EventArgs e)
@@ -69,20 +75,48 @@ namespace Toloknov_YP
             Loading("SELECT * FROM Client");
         }
 
-        private void btn_TopEnter(object sender, EventArgs e)
-        {
-            Loading("SELECT TOP("+tb_NumberSort.Text+") * FROM Client");
-        }
-
         
 
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Loading("SELECT * FROM Client WHERE GenderCode = 'ж'");
+        }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Loading("SELECT * FROM Client ORDER BY RegistrationDate ASC");
 
+        }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Loading("SELECT * FROM Client WHERE GenderCode = 'м'");
 
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            CreateClient newCreateClient = new CreateClient();
+            newCreateClient.Show();
+            
+        }
+
+        private void btn_Exit(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            CreateClient newCreateClient = new CreateClient();
+            newCreateClient.Show();
+            
+        }
     }
 }
